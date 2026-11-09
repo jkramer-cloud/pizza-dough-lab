@@ -1,2 +1,18 @@
-Upload index.html, README.md, and UPLOAD_INSTRUCTIONS.txt to the root of your pizza-dough-lab repository.
-Then enable GitHub Pages on main /(root).
+PIZZA LAB — FROM DOUGH TO OVEN | v5
+
+EXISTING REPOSITORY (pizza-dough-lab)
+1. Extract the ZIP.
+2. Open your existing GitHub repository (pizza-dough-lab).
+3. Replace the root index.html and README.md with the files in this ZIP.
+4. Keep the repository name and GitHub Pages settings unchanged.
+5. Commit and push. Refresh your browser (Ctrl+Shift+R).
+
+NEW REPOSITORY
+Create a PUBLIC GitHub repository called pizza-dough-lab.
+Upload index.html, README.md, and this instruction file to its root.
+GitHub Settings → Pages: Deploy from a branch / main / (root).
+
+Your Learning Hub card should link to:
+https://jkramer-cloud.github.io/pizza-dough-lab/
+
+No Learning Hub changes are needed for the URL. The optional companion Hub v31.48 ZIP updates the card name and description.

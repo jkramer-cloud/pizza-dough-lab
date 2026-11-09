@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#24241d">
-<title>Pizza Dough Lab — Build Your Perfect Pizza · v3</title>
+<title>Pizza Lab: From Dough to Oven — Home Pizzeria Workshop</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT,WONK@9..144,700,30,1&display=swap');
 :root{--ink:#183631;--muted:#6e807a;--cream:#f7f5ee;--paper:#fffefa;--mint:#e7f1e9;--green:#2f7656;--orange:#f4a94b;--line:#dbe4dc;--shadow:0 12px 40px #193b3020}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer}header{background:var(--ink);color:#fff;overflow:hidden}.nav,.hero,.main,.foot{max-width:1140px;margin:auto;padding-left:24px;padding-right:24px}.nav{display:flex;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:20px}.logo{display:grid;place-items:center;background:#f6b84f;width:42px;height:42px;border-radius:13px;color:#17392e;font-size:24px;transform:rotate(-8deg)}.nav small{color:#c8dfd4;font-weight:600}.hero{padding-top:65px;padding-bottom:77px;display:grid;grid-template-columns:1.35fr .65fr;gap:30px;align-items:center}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.2em;font-weight:800;color:#f8c16c}.hero h1{font-family:Fraunces,Georgia,serif;font-size:clamp(46px,6vw,77px);line-height:1.04;letter-spacing:-.04em;margin:15px 0 20px}.hero p{color:#d6e6dc;line-height:1.7;max-width:590px;font-size:17px}.hero .circle{width:min(285px,100%);aspect-ratio:1;border:3px solid #7fba91;border-radius:50%;margin:auto;display:grid;place-items:center;position:relative;background:radial-gradient(circle,#e4ba78 0 60%,#9e5b39 61% 64%,transparent 65%);box-shadow:0 0 0 15px #ffffff0b,0 0 0 30px #ffffff07}.pizza{font-size:112px;filter:drop-shadow(0 10px 2px #0002)}.circle:after{content:'GOOD PIZZA STARTS HERE';position:absolute;bottom:-37px;font-size:11px;font-weight:800;letter-spacing:.15em;color:#f6c16c;white-space:nowrap}.main{margin-top:-27px;position:relative;padding-bottom:44px}.layout{display:grid;grid-template-columns: minmax(0,1fr) minmax(0,.9fr);gap:23px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:29px;box-shadow:var(--shadow)}.panel h2{font:700 29px Fraunces,Georgia,serif;margin:0 0 8px}.desc{font-size:14px;color:var(--muted);margin:0 0 28px;line-height:1.5}.control{margin:0 0 27px}.control-head{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin-bottom:13px}.control label,.section-label{font-weight:800;font-size:13px;letter-spacing:.045em}.control-head output{font-weight:800;color:var(--green);font-size:25px}.slider{width:100%;height:7px;border-radius:20px;appearance:none;background:linear-gradient(to right,var(--green) 0%,var(--green) var(--fill,40%),#dfe5df var(--fill,40%),#dfe5df 100%);cursor:pointer;margin:12px 0}.slider::-webkit-slider-thumb{appearance:none;background:#f6ae51;border:4px solid #fff;box-shadow:0 1px 7px #0004;width:28px;height:28px;border-radius:50%}.slider::-moz-range-thumb{background:#f6ae51;border:4px solid #fff;box-shadow:0 1px 7px #0004;width:20px;height:20px;border-radius:50%}.range-ends{display:flex;justify-content:space-between;color:#8e9c94;font-size:12px;margin-top:3px}.button-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:13px 0 27px}.choice{border-radius:10px;border:1.5px solid var(--line);background:#f7f8f3;color:#4c6559;padding:13px 6px;font-size:13px;font-weight:800}.choice[aria-pressed=true]{border-color:var(--green);color:#fff;background:var(--green)}.info{background:#eaf3ec;border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;color:#456454;margin:0 0 24px}.subheading{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:22px;margin-bottom:15px}.subheading h3{font-size:17px;margin:0}.subheading small{color:var(--muted)}.advanced{display:none}.advanced.open{display:block}.field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field label{display:block;font-size:12px;font-weight:800;color:#566b60;margin:0 0 8px}.field input,.field select{width:100%;min-width:0;border:1px solid #cadbcf;border-radius:10px;padding:12px 10px;color:var(--ink);background:#fff}.field input:focus,.field select:focus{outline:2px solid #8abd9d;outline-offset:1px}.toggle{display:flex;gap:10px;align-items:center;font-size:13px;font-weight:700;margin:14px 0}.toggle input{accent-color:var(--green);width:19px;height:19px}.linkbutton{display:inline-flex;border:0;background:transparent;padding:7px 0;color:var(--green);font-size:13px;font-weight:800;text-decoration:underline;text-underline-offset:4px}.result-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.pill{background:#e2f0e4;color:#2c7151;font-size:11px;letter-spacing:.06em;font-weight:800;border-radius:50px;padding:9px 12px;white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:25px 0}.stat{background:#f1f5ed;border-radius:13px;padding:16px}.stat b{display:block;font:700 31px Fraunces,Georgia,serif;margin:3px 0 2px}.stat span{color:#62776a;font-size:12px;font-weight:700}.stat b small{font:600 13px 'DM Sans',sans-serif}.recipe-table{width:100%;border-collapse:collapse}.recipe-table th{text-transform:uppercase;letter-spacing:.08em;font-size:10px;text-align:left;color:#809087;padding:11px 2px;border-bottom:2px solid var(--ink)}.recipe-table td{padding:15px 2px;border-bottom:1px solid var(--line);font-size:14px}.recipe-table td:nth-child(2){font-weight:800;white-space:nowrap}.recipe-table td:nth-child(3){text-align:right;color:#7b8c7e;white-space:nowrap}.recipe-table tfoot td{font-weight:800;border-top:2px solid var(--ink);border-bottom:0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}.btn{border:0;border-radius:11px;padding:13px 17px;background:var(--green);color:white;font-weight:800;font-size:13px}.btn.secondary{background:#e7efe7;color:#35664b}.btn:hover{filter:brightness(.93)}.instructions{margin-top:23px}.step{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}.step:last-child{border:0}.step-num{flex:0 0 31px;height:31px;display:grid;place-items:center;background:#f5bd67;border-radius:9px;font-weight:800;font-size:12px}.step p{font-size:14px;line-height:1.6;margin:3px 0 0}.tip{background:#fff0d9;border-radius:13px;padding:15px;font-size:13px;line-height:1.55;margin-top:18px}.foot{border-top:1px solid var(--line);padding-top:25px;padding-bottom:40px;color:#5c7467;font-size:13px;line-height:1.7}.foot a{color:#286b4d;font-weight:800}.foot strong{color:var(--ink)}.fine{font-size:11px;color:#71877a}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#19392d;color:white;padding:13px 20px;border-radius:10px;box-shadow:var(--shadow);display:none;z-index:10;font-size:13px}.toast.show{display:block}
@@ -154,11 +154,87 @@ header,.main,.foot{position:relative;z-index:1}
 @media(max-width:430px){.hero h1{font-size:clamp(43px,12vw,62px)}.hero p{font-size:15px}.hero-points{gap:12px;font-size:9px}.panel{padding:19px}.intro-ribbon{padding:12px 14px}.ribbon-star{font-size:23px}.intro-ribbon small{font-size:11px}.preview-card{grid-template-columns:106px minmax(0,1fr);gap:9px;padding:12px}.preview-art{width:98px;height:98px}.preview-art:before{width:92px;height:92px}.preview-copy strong{font-size:22px}.stat b{font-size:27px}.control{padding:16px}.choice{font-size:11px}}
 @media print{header,.intro-ribbon{display:none!important}.settings{position:static}.panel{border:0}.result{background:white}.stat:first-child{background:#fff;color:#222;border:1px solid #ddd}.stat:first-child b,.stat:first-child span{color:#222}}
 
+
+/* PIZZA LAB v5 — the workshop. Its controls are independent of the dough calculator. */
+.hero-workshop-link{display:inline-flex;margin-top:22px;padding:10px 15px;border-radius:8px;text-decoration:none;color:#f4c372;background:#00000038;border:1px solid #e4bd7459;font-weight:800;font-size:12px}
+.hero-workshop-link:hover{background:#0006}
+html{scroll-behavior:smooth}
+.workshop{margin-top:26px;display:grid;gap:17px}
+.workshop-intro{background:#252c22;color:#fcf7e8;border-radius:20px;position:relative;overflow:hidden;padding:35px 36px 33px;display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid #3f4d37}
+.workshop-intro::after{content:"✳";position:absolute;right:25px;bottom:-55px;font:200px Georgia,serif;color:#f4bd6332;pointer-events:none;line-height:1}
+.workshop-intro .kicker{color:#ffc46a;font-size:11px;font-weight:900;letter-spacing:.15em}
+.workshop-intro h2{font:800 clamp(27px,4vw,43px)/1.07 Fraunces,Georgia,serif;letter-spacing:-.048em;margin:9px 0}
+.workshop-intro p{font-size:14px;line-height:1.6;color:#d7d6ca;margin:8px 0 0;max-width:640px}
+.workshop-tag{border:1px solid #c1a472;color:#ebd6ab;border-radius:999px;font-size:10px;letter-spacing:.1em;white-space:nowrap;font-weight:900;padding:11px 15px;position:relative;z-index:1}
+.workshop-panel{padding:26px 27px;border:1px solid #ded2bc;border-radius:18px;background:#fffdf6;box-shadow:var(--shadow)}
+.workshop-panel h3{margin:0 0 7px;font:800 27px Fraunces,Georgia,serif;letter-spacing:-.035em}
+.workshop-panel p.sub{font-size:13px;color:#7a756b;margin:0 0 19px;line-height:1.55}
+.workshop-kicker{font-size:10px;font-weight:900;letter-spacing:.14em;color:#b04d36;margin-bottom:10px}
+.timer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.timer-card{border:1px solid #e5d9c4;border-radius:16px;background:#f9f3e8;padding:17px 18px 19px;min-width:0}
+.timer-card-head{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.timer-card-head strong{font-size:16px;font-weight:900}
+.timer-icon{width:34px;height:34px;display:grid;place-items:center;font-size:21px;border-radius:50%;background:#eacb9b}
+.timer-hint{min-height:42px;font-size:12px;line-height:1.5;color:#7e7464;margin:8px 0 12px}
+.timer-face{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0 14px}
+.timer-display{font:900 clamp(29px,3.6vw,44px)/1 Fraunces,Georgia,serif;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.timer-card.is-done{background:#eaf2df;border-color:#a3bd89}.timer-card.is-done .timer-display{color:#35754b}
+.timer-length{display:flex;align-items:center;gap:5px;font-weight:800;font-size:11px;color:#7f776a}
+.timer-length input{width:60px;max-width:70px;border-radius:9px;border:1px solid #d9c9aa;padding:9px 6px;background:#fffdf8;text-align:center;color:#3a3328}
+.timer-controls{display:flex;gap:7px;flex-wrap:wrap}
+.timer-controls .btn{padding:11px 12px;flex:1;min-width:60px}
+.timer-status{font-size:11px;font-weight:800;min-height:18px;margin-top:9px;color:#756c60}
+.workshop-note{color:#726f66;font-size:12px;line-height:1.55;margin:15px 0 0}
+.lab-duo{display:grid;grid-template-columns:1.18fr .82fr;gap:17px;align-items:start}
+.lab-fieldgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.lab-field{min-width:0}.lab-field.full{grid-column:1/-1}
+.lab-field label{display:block;color:#625b4f;font-size:11px;text-transform:uppercase;letter-spacing:.055em;font-weight:900;margin-bottom:7px}
+.lab-field input,.lab-field select,.lab-field textarea{display:block;width:100%;min-width:0;background:#fffefa;border:1px solid #d8cdb9;border-radius:10px;color:#282820;padding:12px 11px;font-size:14px;line-height:1.45}
+.lab-field textarea{resize:vertical;min-height:74px}
+.lab-field input:focus-visible,.lab-field select:focus-visible,.lab-field textarea:focus-visible{outline:3px solid #e9bb74;outline-offset:2px}
+.lab-summary{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 10px}
+.lab-summary span{font-size:11px;background:#f8ebd5;color:#805132;font-weight:800;padding:7px 9px;border-radius:7px}
+.lab-save{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.lab-save .btn{font-size:13px}
+.mini-caption{font-size:11px;color:#797467;line-height:1.55}
+.advice-group{border-top:1px dashed #dfd1bc;padding-top:12px;margin-top:12px}
+.advice-group:first-child{margin-top:0;padding-top:0;border:0}
+.advice-group h4{font-size:13px;margin:0 0 5px;color:#a83c2e}
+.advice-group p{font-size:12px;line-height:1.6;margin:0;color:#615a4c}
+.advice-group .btn{margin-top:9px;padding:9px 12px;font-size:11px}
+.advice-wrap{background:#f5efe2;border:1px solid #e4d6bf;border-radius:13px;padding:16px}
+.advice-help{display:block;font-size:11px;color:#6e6c60;line-height:1.5;margin-top:12px}
+.lab-trend{margin-top:14px;padding:14px;border:1px dashed #d3bd99;border-radius:11px;background:#fff9eb;font-size:12px;line-height:1.6;color:#675a47}
+.lab-trend strong{display:block;margin-bottom:3px;color:#98432d;font-size:12px}
+.history-heading{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.history-heading .actions{margin:0}
+.history-summary{font-size:12px;color:#775e42;font-weight:800;padding:13px 0}
+.history-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.history-entry{background:#f8f2e7;border:1px solid #e2d6c4;border-radius:13px;padding:16px;min-width:0}
+.history-entry h4{font-size:16px;line-height:1.4;margin:0 0 5px;overflow-wrap:anywhere}
+.history-entry .entry-meta{font-size:11px;color:#796e61;line-height:1.6}
+.history-entry .entry-rating{font-size:16px;color:#b5772b;letter-spacing:.09em}
+.history-entry p{font-size:12px;color:#625c50;margin:8px 0;line-height:1.45;overflow-wrap:anywhere}
+.history-entry .entry-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.history-entry .entry-actions .btn{padding:9px 12px;font-size:11px}
+.empty-history{border:2px dashed #dfd4c1;border-radius:13px;background:#faf6ec;padding:24px;color:#766c60;font-size:13px;line-height:1.6}
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.resource-card{border:1px solid #e6d6bc;border-radius:14px;padding:17px;display:flex;flex-direction:column;gap:11px;color:#352b22;background:#f9f2e6;text-decoration:none;min-height:166px;transition:transform .15s,border-color .15s}
+.resource-card:hover{transform:translateY(-2px);border-color:#bd8653}
+.resource-card strong{font-size:17px;line-height:1.27}
+.resource-card span{color:#756f64;font-size:12px;line-height:1.45}
+.resource-card b{font-size:11px;text-decoration:underline;color:#a03b2d;margin-top:auto}
+@media(max-width:900px){.lab-duo{grid-template-columns:1fr}.timer-grid{gap:9px}.timer-card{padding:14px 12px}.timer-display{font-size:30px}}
+@media(max-width:700px){.timer-grid,.resource-grid{grid-template-columns:1fr}.timer-card{padding:17px 19px}.timer-hint{min-height:auto}.timer-display{font-size:39px}.history-list{grid-template-columns:1fr}.workshop-panel{padding:22px}.workshop-intro{padding:28px 24px}.workshop-tag{display:none}}
+@media(max-width:390px){.lab-fieldgrid{grid-template-columns:1fr}.lab-field.full{grid-column:auto}.workshop-panel{padding:17px}}
+@media print{.workshop{display:none}.side-view{display:none}}
+@media(prefers-reduced-motion:reduce){.resource-card{transition:none}}
+
 </style>
 </head>
 <body>
 <div class="side-view" aria-hidden="true"><div class="side-wall left" id="sideLeft"></div><div class="side-wall right" id="sideRight"></div></div>
-<header><div class="nav"><div class="brand"><span class="logo" aria-hidden="true">✳</span><span>PIZZA <em>DOUGH</em> LAB<small>EST. IN YOUR KITCHEN</small></span></div><span class="nav-badge">FLOUR · WATER · FIRE</span></div><div class="hero"><div><div class="eyebrow"><span class="eyebrow-sun">✳</span> YOUR HOME PIZZERIA STARTS HERE</div><h1>Great pizza<br>starts with <i>dough.</i></h1><p>Dial in the crust. Find your perfect dough ball. Make a pizza night worth remembering—all with a few simple sliders.</p><div class="hero-points"><span>01 / CHOOSE</span><span>02 / MIX</span><span>03 / BAKE</span></div></div><div class="circle" aria-hidden="true"><span class="hero-pie"></span><span class="pizza-stamp">MADE WITH<br>GOOD DOUGH <b>★</b></span></div></div></header>
+<header><div class="nav"><div class="brand"><span class="logo" aria-hidden="true">✳</span><span>PIZZA <em>LAB</em><small>FROM DOUGH TO OVEN</small></span></div><span class="nav-badge">FLOUR · WATER · FIRE</span></div><div class="hero"><div><div class="eyebrow"><span class="eyebrow-sun">✳</span> YOUR HOME PIZZERIA STARTS HERE</div><h1>Great pizza<br>starts with <i>dough.</i></h1><p>Build your dough, dress up your pizza, time your bake, and keep notes on every great experiment—all in your home pizzeria.</p><div class="hero-points"><span>01 / CHOOSE</span><span>02 / MIX</span><span>03 / BAKE</span><span>04 / IMPROVE</span></div><a href="#workshop" class="hero-workshop-link">Explore baking timers &amp; pizza journal ↓</a></div><div class="circle" aria-hidden="true"><span class="hero-pie"></span><span class="pizza-stamp">MADE WITH<br>GOOD DOUGH <b>★</b></span></div></div></header>
 <main class="main"><div class="intro-ribbon"><span class="ribbon-star">✳</span><div><strong>YOUR RECIPE, MADE FRESH.</strong><small>Adjust anything. Every ingredient updates instantly.</small></div><span class="ribbon-icon" aria-hidden="true">↗</span></div><div class="layout">
 <section class="panel settings" aria-label="Pizza settings"><div class="panel-kicker"><span>01</span> THE DOUGH BUILDER</div><h2>Make it yours.</h2><p class="desc">Adjust the sliders to build your batch. Your recipe and pizza preview update instantly.</p>
 <div class="control"><div class="control-head"><label for="diameter">Pizza diameter</label><output id="diameterVal" for="diameter">14 in</output></div><input class="slider" type="range" id="diameter" min="8" max="20" step="1" value="14"><div class="range-ends"><span>8 in</span><span>14 in</span><span>20 in</span></div></div>
@@ -183,8 +259,63 @@ header,.main,.foot{position:relative;z-index:1}
 <table class="recipe-table"><thead><tr><th>Ingredient</th><th>Amount</th><th>Baker's %</th></tr></thead><tbody id="ingredients"></tbody><tfoot><tr><td>Total dough</td><td id="grandTotal">—</td><td>100% batch</td></tr></tfoot></table>
 <div class="actions"><button type="button" class="btn" id="copy">Copy recipe</button><button type="button" class="btn secondary" id="print">Print / Save PDF</button></div>
 <div class="instructions"><div class="panel-kicker"><span>03</span> FROM BOWL TO OVEN</div><h2 style="font-size:25px">How to make it.</h2><p class="desc" style="margin-bottom:10px">A practical home-oven dough method.</p><div id="steps"></div><div class="tip" id="bakeTip"></div></div>
-</section></div></main>
-<footer class="foot"><strong>Pizza Dough Lab</strong> is an independent, free educational baking tool. It is not affiliated with Dough Guy.<p>Inspiration credit: <a href="https://doughguy.co" target="_blank" rel="noopener noreferrer">Dough Guy</a> — whose approachable pizza dough calculator and slider-based interface helped inspire this project. All design, wording, computations, and adjustable recipe presets here are independently implemented.</p><p class="fine">Dough weights are estimates based on circular pizza area and an adjustable crust loading. Temperature, flour absorption, mixing technique, and oven performance affect the final pizza. Use a scale and food-safe practices.</p></footer>
+</section></div>
+
+<section class="workshop" id="workshop" aria-label="Pizza workshop">
+  <div class="workshop-intro"><div><div class="kicker">04 / YOUR HOME PIZZERIA</div><h2>From dough to oven.</h2><p>Time each stage, learn what worked, and build a better pizza next time. Your recipe calculator above stays independent of these tools.</p></div><div class="workshop-tag">TIME · TASTE · IMPROVE</div></div>
+  <section class="workshop-panel" aria-label="Pizza baking timers">
+    <div class="workshop-kicker">THE BAKING CLOCK</div><h3>Time the important parts.</h3><p class="sub">Set your own durations. These are starting points, not guaranteed cooking times — ovens, surfaces, pizza size and toppings vary.</p>
+    <div class="timer-grid">
+      <div class="timer-card" data-timer="warm"><div class="timer-card-head"><strong>Warm your dough</strong><span class="timer-icon" aria-hidden="true">◷</span></div><p class="timer-hint">Let refrigerated dough relax before stretching; look for a supple, workable texture.</p><div class="timer-face"><output class="timer-display" id="clock-warm" aria-label="Dough warm-up time remaining">01:30:00</output><label class="timer-length">Minutes <input type="number" min="1" max="360" step="1" value="90" id="minutes-warm"></label></div><div class="timer-controls"><button class="btn" data-timer-start="warm" type="button">Start</button><button class="btn secondary" data-timer-reset="warm" type="button">Reset</button></div><div class="timer-status" id="timer-status-warm" role="status">Ready to start</div></div>
+      <div class="timer-card" data-timer="preheat"><div class="timer-card-head"><strong>Preheat oven</strong><span class="timer-icon" aria-hidden="true">♨</span></div><p class="timer-hint">A steel or stone needs time to heat through; use an oven-safe surface rated for your temperature.</p><div class="timer-face"><output class="timer-display" id="clock-preheat" aria-label="Oven preheat time remaining">50:00</output><label class="timer-length">Minutes <input type="number" min="1" max="360" step="1" value="50" id="minutes-preheat"></label></div><div class="timer-controls"><button class="btn" data-timer-start="preheat" type="button">Start</button><button class="btn secondary" data-timer-reset="preheat" type="button">Reset</button></div><div class="timer-status" id="timer-status-preheat" role="status">Ready to start</div></div>
+      <div class="timer-card" data-timer="bake"><div class="timer-card-head"><strong>Bake pizza</strong><span class="timer-icon" aria-hidden="true">◉</span></div><p class="timer-hint">Watch the crust, cheese and underside; adjust the timer for your oven and preferred doneness.</p><div class="timer-face"><output class="timer-display" id="clock-bake" aria-label="Pizza bake time remaining">08:00</output><label class="timer-length">Minutes <input type="number" min="1" max="120" step="1" value="8" id="minutes-bake"></label></div><div class="timer-controls"><button class="btn" data-timer-start="bake" type="button">Start</button><button class="btn secondary" data-timer-reset="bake" type="button">Reset</button></div><div class="timer-status" id="timer-status-bake" role="status">Ready to start</div></div>
+    </div>
+    <p class="workshop-note">Timers use elapsed time and can resume after a page reload. Audible alerts require an open, active tab and may not play while the page is closed or the device is asleep. Never leave an oven unattended because a timer is running.</p>
+  </section>
+  <div class="lab-duo">
+    <section class="workshop-panel" aria-label="Pizza experiment journal">
+      <div class="workshop-kicker">THE PIZZA JOURNAL</div><h3>Remember every bake.</h3><p class="sub">Rate each attempt, record how it behaved, and save the exact recipe settings for later. No login required.</p>
+      <form id="journalForm">
+        <div class="lab-fieldgrid">
+          <div class="lab-field full"><label for="batchName">Batch name (optional)</label><input id="batchName" type="text" maxlength="65" placeholder="Friday night pepperoni · attempt 3"></div>
+          <div class="lab-field"><label for="batchRating">How was it?</label><select id="batchRating"><option value="5">★★★★★ — Excellent</option><option value="4">★★★★☆ — Very good</option><option value="3" selected>★★★☆☆ — Getting close</option><option value="2">★★☆☆☆ — Needs work</option><option value="1">★☆☆☆☆ — Try again</option></select></div>
+          <div class="lab-field"><label for="batchDough">Dough behavior</label><select id="batchDough"><option value="good">Easy to handle</option><option value="sticky">Very sticky</option><option value="dry">Dry or stiff</option><option value="tight">Springs back</option><option value="tearing">Tears easily</option><option value="overproof">Weak or overproofed</option></select></div>
+          <div class="lab-field"><label for="batchBake">How did it bake?</label><select id="batchBake"><option value="good">Even / just right</option><option value="pale">Pale or soft underside</option><option value="burnt">Bottom burned</option><option value="paleTop">Top underdone</option><option value="soggy">Wet or floppy center</option><option value="dry">Dry or tough crust</option></select></div>
+          <div class="lab-field"><label for="batchSurface">Baking surface</label><select id="batchSurface"><option value="steel">Pizza steel</option><option value="stone">Pizza stone</option><option value="pan">Sheet pan</option><option value="screen">Pizza screen</option></select></div>
+          <div class="lab-field"><label for="batchTemp">Oven temperature (°F)</label><input id="batchTemp" type="number" min="200" max="900" step="5" value="500"></div>
+          <div class="lab-field"><label for="batchActualBake">Actual bake (minutes)</label><input id="batchActualBake" type="number" min="1" max="120" step="0.5" value="8"></div>
+          <div class="lab-field full"><label for="batchAltitude">Elevation above sea level (feet, optional)</label><input id="batchAltitude" type="number" min="0" max="14000" step="50" placeholder="e.g. 1500 — enter your kitchen elevation"></div>
+          <div class="lab-field full"><label for="batchNotes">What did you notice?</label><textarea id="batchNotes" maxlength="750" placeholder="Chewy edge, sauce a little watery, nice browning after rotating halfway..."></textarea></div>
+        </div>
+        <div class="lab-summary"><span id="journalRecipeSummary">14 in · 2 pies · Classic</span><span id="journalHydrationSummary">63% hydration</span><span id="journalBaseSummary">Classic red base</span></div>
+        <div class="lab-save"><button class="btn" type="submit">Save this pizza attempt</button><span class="mini-caption">Saved locally on this browser, not to an online account.</span></div>
+      </form>
+    </section>
+    <section class="workshop-panel" aria-label="Recipe improvement suggestions">
+      <div class="workshop-kicker">FOR YOUR NEXT BATCH</div><h3>Try one small change.</h3><p class="sub">Suggestions respond to your notes, bake results and elevation. They are starting experiments, not automatic recipe corrections.</p>
+      <div id="recommendations" class="advice-wrap" aria-live="polite"></div>
+      <div class="lab-trend" id="historyInsight" aria-live="polite"></div>
+      <span class="advice-help">Adjust only one thing at a time so you know what helped. Higher elevations can alter proofing and hydration; this tool does not automatically change yeast or baking times based on elevation.</span>
+    </section>
+  </div>
+  <section class="workshop-panel" aria-label="Saved pizza attempts">
+    <div class="history-heading"><div><div class="workshop-kicker">YOUR RECIPE HISTORY</div><h3>Past pies. Better pies.</h3><p class="sub" style="margin-bottom:2px">Reopen a previous formula and compare your results over time.</p></div><div class="actions"><button type="button" class="btn secondary" id="exportJournal">Export journal</button><label class="btn secondary" for="importJournal" style="cursor:pointer;display:inline-block">Import journal</label><input id="importJournal" type="file" accept=".json,application/json" hidden></div></div>
+    <div id="historySummary" class="history-summary"></div><div id="historyList" class="history-list"></div>
+    <p class="workshop-note">Your journal stays in this browser's local storage. It is not shared across devices and may be visible to others on the same browser profile. Export a backup before clearing browser data or changing computers. Import merges attempts by ID.</p>
+  </section>
+  <section class="workshop-panel" aria-label="Pizza learning resources">
+    <div class="workshop-kicker">LEARN WITH THE ORIGINAL CREATOR</div><h3>Pizza school, beyond the calculator.</h3><p class="sub">Dough Guy's own tutorials are linked here with credit. Videos open on his site or YouTube, not inside this app.</p>
+    <div class="resource-grid">
+      <a class="resource-card" href="https://www.youtube.com/watch?v=RqhzJWs7HsU" target="_blank" rel="noopener noreferrer"><strong>New York-style pizza sauce</strong><span>Watch Dough Guy demonstrate a classic pizza sauce.</span><b>Watch sauce tutorial ↗</b></a>
+      <a class="resource-card" href="https://www.youtube.com/watch?v=D40OMdLDCtU" target="_blank" rel="noopener noreferrer"><strong>His easy pizza dough</strong><span>The original creator walks through his dough recipe and ingredient proportions.</span><b>Watch dough tutorial ↗</b></a>
+      <a class="resource-card" href="https://doughguy.co/pages/learn" target="_blank" rel="noopener noreferrer"><strong>Dough Guy's video library</strong><span>Browse lessons on shaping, baking, ingredients, pizza equipment and more.</span><b>Explore Dough Guy's lessons ↗</b></a>
+    </div>
+    <p class="workshop-note">For a second reference on elevation and yeast dough, see <a href="https://www.kingarthurbaking.com/learn/resources/high-altitude-baking" target="_blank" rel="noopener noreferrer">King Arthur Baking's high-altitude guide</a>. These third-party resources are independently created; Pizza Lab is not affiliated with them.</p>
+  </section>
+</section>
+
+</main>
+<footer class="foot"><strong>Pizza Lab: From Dough to Oven</strong> is an independent, free educational baking tool. It is not affiliated with Dough Guy.<p>Inspiration credit: <a href="https://doughguy.co" target="_blank" rel="noopener noreferrer">Dough Guy</a> — whose approachable pizza dough calculator and slider-based interface helped inspire this project. All design, wording, computations, and adjustable recipe presets here are independently implemented.</p><p class="fine">Dough weights are estimates based on circular pizza area and an adjustable crust loading. Temperature, flour absorption, mixing technique, and oven performance affect the final pizza. Use a scale and food-safe practices.</p></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 (()=>{'use strict';
@@ -248,10 +379,102 @@ $('randomizeLook').addEventListener('click',()=>{visualBase=pick(Object.keys(bas
 $('resetLook').addEventListener('click',()=>{visualBase='red';selectedToppings=new Set(['pepperoni','basil','mushroom']);$('showDecor').checked=true;updateVisuals();toast('Background look reset')});
 $('advancedToggle').addEventListener('click',()=>{const open=$('advanced').classList.toggle('open');$('advancedToggle').setAttribute('aria-expanded',String(open));$('advancedToggle').textContent=open?'Hide recipe controls −':'Show recipe controls +'});
 $('reset').addEventListener('click',()=>{manualYeast=false;manualHydration=false;for(const [k,v]of Object.entries(defaults))$(k).value=v;$('yeast').value=timings[ferment].yeast;$('ballOverride').value='';$('glutenFree').checked=false;visualBase='red';selectedToppings=new Set(['pepperoni','basil','mushroom']);$('showDecor').checked=true;updateVisuals();recalc()});
-function asText(){const r=current;return `PIZZA DOUGH LAB\n${r.count} × ${r.diameter} in pizzas | ${r.crust} | ${r.ferment}\n${Math.round(r.ball)} g per pizza | ${Math.round(r.total)} g total dough\n\nINGREDIENTS\n`+r.parts.map(([name,g,pct])=>`${name}: ${fmt(g)} g (${pct}%)`).join('\n')+'\n\nFor instructions, use the Pizza Dough Lab recipe page.\nInspired by Dough Guy — https://doughguy.co'}
+function asText(){const r=current;return `PIZZA LAB — FROM DOUGH TO OVEN\n${r.count} × ${r.diameter} in pizzas | ${r.crust} | ${r.ferment}\n${Math.round(r.ball)} g per pizza | ${Math.round(r.total)} g total dough\n\nINGREDIENTS\n`+r.parts.map(([name,g,pct])=>`${name}: ${fmt(g)} g (${pct}%)`).join('\n')+'\n\nFor instructions, use the Pizza Lab recipe page.\nInspired by Dough Guy — https://doughguy.co'}
 function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
 $('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(asText());toast('Recipe copied to clipboard')}catch{const el=document.createElement('textarea');el.value=asText();document.body.append(el);el.select();document.execCommand('copy');el.remove();toast('Recipe copied')}});
 $('print').addEventListener('click',()=>window.print());updateVisuals();recalc();
+})();
+</script>
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const key = 'pizza-lab-journal-v1';
+const timerKey = 'pizza-lab-timers-v1';
+const foodLabels = {good:'Easy to handle', sticky:'Very sticky', dry:'Dry or stiff', tight:'Springs back', tearing:'Tears easily', overproof:'Weak or overproofed'};
+const bakeLabels = {good:'Even / just right', pale:'Pale or soft underside', burnt:'Bottom burned', paleTop:'Top underdone', soggy:'Wet or floppy center', dry:'Dry or tough crust'};
+const own = (obj, k) => Object.prototype.hasOwnProperty.call(obj,k);
+let journal = [];
+function saveStore(k,obj){try{localStorage.setItem(k,JSON.stringify(obj));return true}catch(e){return false}}
+function readStore(k,fallback){try{const parsed=JSON.parse(localStorage.getItem(k));return parsed===null?fallback:parsed}catch(e){return fallback}}
+function textNode(tag,str,cls){const e=document.createElement(tag);if(cls)e.className=cls;e.textContent=str;return e}
+function makeButton(label,action,cls){const b=document.createElement('button');b.type='button';b.className=cls||'btn secondary';b.textContent=label;b.addEventListener('click',action);return b}
+function titleCase(s){return s.charAt(0).toUpperCase()+s.slice(1)}
+function snapshotRecipe(){const keys=['diameter','count','hydration','salt','oil','sugar','yeast','ballOverride'];const values={};for(const k of keys)values[k]=$(k).value;values.crust=document.querySelector('[data-crust][aria-pressed="true"]')?.dataset.crust||'classic';values.ferment=document.querySelector('[data-ferment][aria-pressed="true"]')?.dataset.ferment||'overnight';values.gf=$('glutenFree').checked;values.base=document.querySelector('[data-base][aria-pressed="true"]')?.dataset.base||'red';values.toppings=[...document.querySelectorAll('[data-top][aria-pressed="true"]')].map(e=>e.dataset.top);return values}
+function updateJournalSummary(){const s=snapshotRecipe();$('journalRecipeSummary').textContent=`${s.diameter} in · ${s.count} pie${Number(s.count)===1?'':'s'} · ${titleCase(s.crust)}`;$('journalHydrationSummary').textContent=`${s.hydration}% hydration`;$('journalBaseSummary').textContent=`${titleCase(s.base)} base`}
+function fillRecipe(snapshot){const s=snapshot||{};if(!s||typeof s!=='object')return;
+const crust=['thin','classic','thick'].includes(s.crust)?s.crust:'classic';document.querySelector(`[data-crust="${crust}"]`)?.click();
+const ferm=['same','overnight','long'].includes(s.ferment)?s.ferment:'overnight';document.querySelector(`[data-ferment="${ferm}"]`)?.click();
+$('glutenFree').checked=Boolean(s.gf);$('glutenFree').dispatchEvent(new Event('change',{bubbles:true}));
+for(const k of ['diameter','count','hydration','salt','oil','sugar','yeast','ballOverride']){if(!own(s,k))continue;const e=$(k);e.value=String(s[k]);e.dispatchEvent(new Event('input',{bubbles:true}))}
+if(['red','white','pesto','bbq'].includes(s.base))document.querySelector(`[data-base="${s.base}"]`)?.click();
+if(Array.isArray(s.toppings)){const target=new Set(s.toppings);document.querySelectorAll('[data-top]').forEach(e=>{const pressed=e.getAttribute('aria-pressed')==='true';if(target.has(e.dataset.top)!==pressed)e.click()})}
+updateJournalSummary();window.scrollTo({top:0,behavior:'smooth'});
+}
+function numbered(id,min,max,def){const n=Number($(id).value);return Number.isFinite(n)&&n>=min&&n<=max?n:def}
+function selectedData(){return {dough:$('batchDough').value,bake:$('batchBake').value,altitude:$('batchAltitude').value,ovenTemp:$('batchTemp').value,surface:$('batchSurface').value,actualBake:$('batchActualBake').value}}
+function getAdvice(s){const advice=[];function add(title,detail,action){advice.push({title,detail,action})}
+if(s.dough==='sticky') add('Sticky dough','Try flouring your hands lightly and allowing more rest. If this keeps happening, test hydration about 1 percentage point lower next batch.', {field:'hydration',change:-1});
+if(s.dough==='dry')add('Dry or stiff dough','Try an additional 1 percentage point of hydration next time, or allow more time for the flour to absorb water.',{field:'hydration',change:1});
+if(s.dough==='tight')add('Dough springs back','Keep the dough covered and rest it 15–30 more minutes at room temperature before stretching. Avoid forcing it.');
+if(s.dough==='tearing')add('Dough tears easily','Handle it gently and allow proper warming and relaxation. Check gluten development and whether it fermented too long before altering ingredient percentages.');
+if(s.dough==='overproof')add('Weak or overproofed dough','Shorten room-temperature proof time, refrigerate sooner, or test a slightly lower yeast percentage next time. Judge by dough expansion, not the clock alone.');
+if(s.bake==='pale')add('Pale bottom','Give your steel or stone more time to fully preheat and check its temperature. If still pale, compare surface type and rack placement.');
+if(s.bake==='burnt')add('Burned underside','Check the steel or stone temperature, reduce excessive semolina, or try less intense bottom heat. Check the underside earlier.');
+if(s.bake==='paleTop')add('Top needs more color','Try a higher rack placement during the last part of the bake. A brief broil can help, but supervise continuously.');
+if(s.bake==='soggy')add('Wet or floppy center','Test less sauce or fewer wet toppings; drain moisture-rich ingredients. Check the underside before taking the pizza out.');
+if(s.bake==='dry')add('Dry crust','Check earlier and consider shortening the bake. If the dough itself also seems dry, test a small increase in hydration.');
+const a=Number(s.altitude);
+if(s.altitude!==''&&Number.isFinite(a)&&a>=3000)add('High-elevation note',`At approximately ${a.toLocaleString()} ft, yeast dough may rise faster and lose moisture more readily. Start by watching proofing closely; consider slightly less yeast or a little more water only if your results show a need. Do not change everything at once.`);
+if(s.dough==='good'&&s.bake==='good')add('Keep what worked','Your notes show a well-behaved dough and an even bake. Save this as your baseline and change only one variable next time.');
+if(!advice.length)add('A useful experiment','Take a note on stretchability and the underside of the baked crust. Change just one variable next time, such as resting time or rack position.');
+return advice;
+}
+function renderAdvice(s,source){const box=$('recommendations');box.replaceChildren();const advice=getAdvice(s);for(const a of advice){const group=document.createElement('div');group.className='advice-group';group.append(textNode('h4',a.title),textNode('p',a.detail));if(a.action){group.append(makeButton('Try suggested hydration next batch',()=>{if(source?.recipe)fillRecipe(source.recipe);const el=$(a.action.field);const current=Number(el.value);const min=Number(el.min),max=Number(el.max);if(Number.isFinite(current)){el.value=String(Math.max(min,Math.min(max,Math.round((current+a.action.change)*2)/2)));el.dispatchEvent(new Event('input',{bubbles:true}));updateJournalSummary();window.scrollTo({top:0,behavior:'smooth'})}},'btn secondary'))}box.append(group)}}
+function journalItemToText(item){return [item.name,`${item.rating}/5 stars`,`${item.recipe?.diameter||'?'} in ${item.recipe?.crust||'classic'} · ${item.recipe?.hydration||'?'}% water`,`${foodLabels[item.dough]||item.dough} · ${bakeLabels[item.bake]||item.bake}`,`${item.ovenTemp}°F · ${item.actualBake} min · ${item.surface}`,item.altitude!==''?`${item.altitude} ft`:'' ,item.notes||''].filter(Boolean).join(' | ')}
+function renderTrend(){const el=$('historyInsight');el.replaceChildren();el.append(textNode('strong','WHAT YOUR PAST BAKES SAY'));if(journal.length<2){el.append(textNode('span','Save at least two pizza attempts to see a side-by-side comparison of your experiments.'));return}const [latest,previous]=journal;const a=Number(latest.rating),b=Number(previous.rating),delta=a-b;let story=delta>0?`Your latest bake scored ${a}/5 — up ${delta} point${delta===1?'':'s'} from the previous ${b}/5.`:delta<0?`Your latest bake scored ${a}/5 — down ${Math.abs(delta)} point${delta===-1?'':'s'} from the previous ${b}/5.`:`Your last two attempts both scored ${a}/5.`;el.append(textNode('p',story));const h1=Number(latest.recipe?.hydration),h2=Number(previous.recipe?.hydration);if(Number.isFinite(h1)&&Number.isFinite(h2)&&h1!==h2){const sign=h1>h2?'higher':'lower';el.append(textNode('p',`Hydration was ${h1}% versus ${h2}% previously (${sign}). Note this difference alongside proofing and oven changes; two bakes alone cannot identify a cause.`))}if(latest.dough===previous.dough&&latest.dough!=='good'){el.append(textNode('p',`Both attempts reported '${foodLabels[latest.dough]||latest.dough}' — consider testing one specific dough change next time.`))}if(latest.bake===previous.bake&&latest.bake!=='good'){el.append(textNode('p',`Both attempts reported '${bakeLabels[latest.bake]||latest.bake}' — prioritize a single oven or topping adjustment.`))}if(delta<0){const best=journal.reduce((a,b)=>Number(a.rating)>=Number(b.rating)?a:b);if(Number(best.rating)>=4)el.append(textNode('p',`Your best-rated baseline is '${best.name}' (${best.rating}/5). You can load it from recipe history below.`))}}
+function renderHistory(){const list=$('historyList');list.replaceChildren();const summary=$('historySummary');renderTrend();if(!journal.length){summary.textContent='No pizza attempts saved yet.';list.append(textNode('div','Your first pizza experiment starts here. Fill out the journal after baking to build your own recipe history.','empty-history'));return}const ratings=journal.map(x=>Number(x.rating));const avg=(ratings.reduce((a,b)=>a+b,0)/ratings.length).toFixed(1);const best=journal.reduce((a,b)=>Number(a.rating)>=Number(b.rating)?a:b);summary.textContent=`${journal.length} saved attempt${journal.length===1?'':'s'} · Average ${avg}/5 · Best: ${best.name}`;
+for(const item of journal.slice(0,30)){const card=document.createElement('article');card.className='history-entry';card.append(textNode('h4',item.name),textNode('div',`${'★'.repeat(Math.max(0,Math.min(5,item.rating)))}${'☆'.repeat(Math.max(0,5-Math.min(5,item.rating)))}`,'entry-rating'),textNode('div',new Date(item.created).toLocaleDateString()+` · ${item.recipe.diameter} in ${item.recipe.crust} · ${item.recipe.hydration}% hydration`,'entry-meta'),textNode('div',`${foodLabels[item.dough]||item.dough} · ${bakeLabels[item.bake]||item.bake}`,'entry-meta'),textNode('div',`${item.ovenTemp}°F · ${item.actualBake} min · ${item.surface}${item.altitude!==''?' · '+item.altitude+' ft':''}`,'entry-meta'));
+if(item.notes)card.append(textNode('p',item.notes));const actions=document.createElement('div');actions.className='entry-actions';actions.append(makeButton('Load recipe',()=>{fillRecipe(item.recipe);$('batchDough').value=item.dough;$('batchBake').value=item.bake;$('batchAltitude').value=item.altitude;$('batchSurface').value=item.surface;$('batchTemp').value=item.ovenTemp;$('batchActualBake').value=item.actualBake;renderAdvice(selectedData(),item)},'btn'));
+actions.append(makeButton('Review tips',()=>{renderAdvice(item,item);document.getElementById('recommendations').scrollIntoView({behavior:'smooth',block:'center'})}));actions.append(makeButton('Delete',()=>{if(!confirm(`Delete saved attempt "${item.name}"?`))return;journal=journal.filter(x=>x.id!==item.id);saveStore(key,journal);renderHistory()}));card.append(actions);list.append(card)}}
+function validItem(x){return x&&typeof x==='object'&&typeof x.id==='string'&&typeof x.created==='string'&&!Number.isNaN(Date.parse(x.created))&&x.recipe&&typeof x.recipe==='object'&&typeof x.name==='string'&&x.name.length<=80&&Number(x.rating)>=1&&Number(x.rating)<=5&&typeof x.dough==='string'&&typeof x.bake==='string'}
+const loaded=readStore(key,[]);if(Array.isArray(loaded))journal=loaded.filter(validItem).slice(0,100);
+$('journalForm').addEventListener('submit',e=>{e.preventDefault();const data=selectedData();const n=$('batchName').value.trim()||`Pizza attempt ${journal.length+1}`;const item={id:Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,8),created:new Date().toISOString(),name:n.slice(0,65),rating:numbered('batchRating',1,5,3),dough:data.dough,bake:data.bake,altitude:data.altitude,ovenTemp:numbered('batchTemp',200,900,500),surface:data.surface,actualBake:numbered('batchActualBake',1,120,8),notes:$('batchNotes').value.slice(0,750),recipe:snapshotRecipe()};journal.unshift(item);journal=journal.slice(0,100);saveStore(key,journal);renderHistory();renderAdvice(item,item);$('batchName').value='';$('batchNotes').value='';$('historySummary').scrollIntoView({behavior:'smooth',block:'center'});});
+for(const id of ['batchDough','batchBake','batchAltitude','batchSurface','batchTemp','batchActualBake'])$(id).addEventListener('input',()=>renderAdvice(selectedData(),null));
+for(const id of ['diameter','count','hydration','glutenFree','ballOverride','crustChoices','fermentChoices','baseChoices','toppingChoices'])$(id).addEventListener('input',updateJournalSummary);
+for(const id of ['crustChoices','fermentChoices','baseChoices','toppingChoices','reset'])$(id).addEventListener('click',()=>setTimeout(updateJournalSummary,0));
+$('exportJournal').addEventListener('click',()=>{if(!journal.length){alert('No saved attempts to export yet.');return}const text=JSON.stringify({format:'pizza-lab-journal-v1',exported:new Date().toISOString(),attempts:journal},null,2);const blob=new Blob([text],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='pizza-lab-journal.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$('importJournal').addEventListener('change',async e=>{const file=e.target.files?.[0];e.target.value='';if(!file)return;if(file.size>1000000){alert('Journal file is too large (1 MB maximum).');return}try{const parsed=JSON.parse(await file.text());if(parsed.format!=='pizza-lab-journal-v1'||!Array.isArray(parsed.attempts))throw Error('Unrecognized journal format');const incoming=parsed.attempts.filter(validItem).slice(0,100);const merged=new Map(journal.map(x=>[x.id,x]));for(const item of incoming)if(!merged.has(item.id))merged.set(item.id,item);journal=[...merged.values()].sort((a,b)=>String(b.created).localeCompare(String(a.created))).slice(0,100);saveStore(key,journal);renderHistory();alert(`Imported ${incoming.length} compatible attempt(s).`)}catch(err){alert('Could not import that journal. Choose an export made by Pizza Lab.')}});
+// Clock state is timestamp-based, so hidden-tab throttling will not slow the count.
+const timerDefaults={warm:90,preheat:50,bake:8};
+const persisted=readStore(timerKey,{});
+const timers={};
+for(const name of Object.keys(timerDefaults)){
+ const entry=persisted&&typeof persisted==='object'?persisted[name]:null;
+ const duration=Number(entry?.duration);
+ const mins=Number.isFinite(duration)&&duration>=60&&duration<=360*60?duration:timerDefaults[name]*60;
+ timers[name]={duration:mins,remaining:Math.max(0,Math.min(360*60,Number(entry?.remaining)||mins)),endAt:Number(entry?.endAt)||null,running:Boolean(entry?.running)&&Boolean(Number(entry?.endAt)),done:Boolean(entry?.done)};
+ $("minutes-"+name).value=Math.round(mins/60);
+}
+function persistTimers(){saveStore(timerKey,timers)}
+function fmtClock(seconds){const n=Math.max(0,Math.ceil(seconds));const h=Math.floor(n/3600),m=Math.floor(n%3600/60),s=n%60;return (h>0?String(h).padStart(2,'0')+':':'')+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}
+let audioContext=null;
+function unlockAudio(){try{if(!audioContext){const A=window.AudioContext||window.webkitAudioContext;if(A)audioContext=new A()}if(audioContext?.state==='suspended')audioContext.resume()}catch(e){}}
+function ping(){try{if(!audioContext||audioContext.state!=='running')return;[0,.24,.48].forEach((t)=>{const osc=audioContext.createOscillator(),gain=audioContext.createGain();osc.type='sine';osc.frequency.value=720;gain.gain.setValueAtTime(.0001,audioContext.currentTime+t);gain.gain.exponentialRampToValueAtTime(.18,audioContext.currentTime+t+.03);gain.gain.exponentialRampToValueAtTime(.0001,audioContext.currentTime+t+.18);osc.connect(gain).connect(audioContext.destination);osc.start(audioContext.currentTime+t);osc.stop(audioContext.currentTime+t+.2)})}catch(e){}}
+function redrawTimer(name){const t=timers[name],card=document.querySelector(`[data-timer="${name}"]`),button=document.querySelector(`[data-timer-start="${name}"]`);if(t.running)t.remaining=Math.max(0,(t.endAt-Date.now())/1000);
+ if(t.running&&t.remaining<=0){t.running=false;t.done=true;t.endAt=null;persistTimers();if(document.visibilityState==='visible')ping();}
+ $('clock-'+name).textContent=fmtClock(t.remaining);card.classList.toggle('is-done',t.done);button.textContent=t.running?'Pause':t.done?'Start again':t.remaining<t.duration?'Resume':'Start';$('timer-status-'+name).textContent=t.done?(name==='bake'?'Bake timer finished — check the pizza!':name==='preheat'?'Preheat timer finished — check oven and surface!':'Warm-up finished — check your dough!'):t.running?'Counting down...':t.remaining<t.duration?'Paused':'Ready to start';
+}
+function resetTimer(name){const t=timers[name];const v=Number($('minutes-'+name).value);if(Number.isFinite(v)&&v>=1&&v<=360)t.duration=v*60;t.remaining=t.duration;t.endAt=null;t.running=false;t.done=false;persistTimers();redrawTimer(name)}
+for(const name of Object.keys(timers)){
+ $(`minutes-${name}`).addEventListener('change',()=>{if(timers[name].running){$('minutes-'+name).value=Math.round(timers[name].duration/60);return}resetTimer(name)});
+ document.querySelector(`[data-timer-reset="${name}"]`).addEventListener('click',()=>resetTimer(name));
+ document.querySelector(`[data-timer-start="${name}"]`).addEventListener('click',()=>{unlockAudio();const t=timers[name];if(t.running){t.remaining=Math.max(0,(t.endAt-Date.now())/1000);t.running=false;t.endAt=null}else{if(t.done){t.remaining=t.duration;t.done=false}t.endAt=Date.now()+t.remaining*1000;t.running=true}persistTimers();redrawTimer(name)});
+ redrawTimer(name)
+}
+// Retain elapsed time when the tab is backgrounded and browser throttles intervals.
+setInterval(()=>{for(const name of Object.keys(timers))if(timers[name].running)redrawTimer(name)},400);
+renderHistory();renderAdvice(selectedData(),null);updateJournalSummary();
 })();
 </script>
 </body></html>
