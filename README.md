@@ -1,19 +1,30 @@
 # Pizza Dough Lab
 
-A free, independent, interactive calculator for making pizza dough at home. Customize pizza diameter, quantity, crust thickness, fermentation, hydration, and baker’s percentages; review calculated ingredients and a home-oven dough method.
+Pizza Dough Lab is a free, interactive pizza dough calculator for home pizza making.
 
 ## Features
-- Responsive sliders and instant recipe recalculation
-- Thin, classic, and thick crust presets
-- Same-day, overnight, or 2–3 day fermentation choices
-- Ingredient weights in grams, copyable and printable recipe
-- Advanced ingredient controls and estimated dough ball sizing
+- Pizza diameter slider
+- Quantity slider
+- Crust thickness options
+- Fermentation plan options
+- Adjustable baker's percentages
+- Live ingredient calculations
+- Printable recipe card
+- Pizzeria view controls for visual side backgrounds
+- Toggleable toppings and pizza base looks
+- Randomize-look feature
 
-## Use
-Open `index.html` in a modern browser, or publish the repo via GitHub Pages (Settings → Pages → Deploy from a branch → `main` / `(root)`). No build tools are required. Some optional fonts require an internet connection.
+## Publish on GitHub Pages
+1. Create a repository named `pizza-dough-lab`.
+2. Upload the files from this package to the repository root.
+3. In GitHub, open Settings → Pages.
+4. Set the source to `Deploy from a branch`.
+5. Choose `main` and `/ (root)`.
+6. Save.
 
-## Attribution
-Inspired by the approachable design and pizza dough calculator from [Dough Guy](https://doughguy.co/). Pizza Dough Lab is an independent project and is not affiliated with or endorsed by Dough Guy.
+Your published site will be:
+`https://jkramer-cloud.github.io/pizza-dough-lab/`
 
-## Recipe notes
-These values are adjustable estimates, not a replicated recipe from Dough Guy. Real-world dough behavior depends on flour, temperature, and fermentation. Gluten-free baking requires a tested GF formulation; any experimental GF setting should not be treated as a fully validated gluten-free recipe.
+## Credit
+Inspired by Dough Guy: https://doughguy.co
+This project is independently designed and implemented.
