@@ -237,6 +237,17 @@ html{scroll-behavior:smooth}
 @media(min-width:1001px) and (max-width:1199px){.side-wall{width:128px}}
 @media(min-width:1200px){.nav,.hero,.main,.foot{padding-left:30px;padding-right:30px}}
 
+
+/* v5.2 desktop fullness tuning */
+body{background:#f4f0e6;background-image:radial-gradient(rgba(121,102,79,.08) 0 1px,transparent 1px),linear-gradient(180deg,#f7f4ec 0%,#f2ecdf 100%);background-size:14px 14px,100% 100%}
+.nav,.hero,.main,.foot{max-width:920px}
+.side-wall{width:clamp(170px,calc((100vw - 980px)/2),320px);background:linear-gradient(180deg,#efd5aa 0%,#ebc397 10%,var(--wall-base,#cf6549) 24%,#db8b63 52%,var(--wall-base,#cf6549) 78%,#f0d5aa 100%)}
+.side-wall::before{background-image:radial-gradient(rgba(255,255,255,.26) 0 1px,transparent 1px),radial-gradient(rgba(0,0,0,.08) 0 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.18),transparent 28%,transparent 72%,rgba(255,255,255,.16));background-size:16px 16px,26px 26px,100% 100%;background-position:0 0,8px 9px,0 0;mix-blend-mode:soft-light}
+.side-wall::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 12%,rgba(255,242,196,.22) 0 18%,transparent 19%),radial-gradient(circle at 30% 58%,rgba(255,247,222,.12) 0 14%,transparent 15%),radial-gradient(circle at 68% 80%,rgba(255,239,191,.1) 0 16%,transparent 17%);pointer-events:none}
+.side-wall .topping{opacity:.98;filter:drop-shadow(0 2px 3px rgba(0,0,0,.18))}
+@media(min-width:1200px){.nav,.hero,.main,.foot{padding-left:26px;padding-right:26px}}
+@media(min-width:1200px){.layout{gap:16px}}
+
 </style>
 </head>
 <body>
@@ -343,7 +354,7 @@ function toppingSummary(){const tops=[...selectedToppings];return tops.length?to
 function applyTheme(){const theme=baseThemes[visualBase];document.documentElement.style.setProperty('--wall-base',theme.wallBase);document.documentElement.style.setProperty('--wall-crust',theme.wallCrust);document.documentElement.style.setProperty('--pizza-base',theme.pizzaBase);document.documentElement.style.setProperty('--pizza-crust',theme.wallCrust);const visible=$('showDecor').checked;['sideLeft','sideRight'].forEach(id=>$(id).classList.toggle('hidden',!visible));$('visualLook').textContent=theme.label+' base · '+toppingSummary();}
 function toppingHTML(name,style=''){return `<span class="topping ${name}" style="${style}"></span>`}
 function pieToppingHTML(name,style=''){return `<span class="pie-top ${name}" style="${style}"></span>`}
-function renderWalls(){const visible=$('showDecor').checked;const tops=[...selectedToppings];for(const id of ['sideLeft','sideRight']){const el=$(id);if(!visible){el.innerHTML='';continue;}let html='';if(tops.length){const count=18;for(let i=0;i<count;i++){const t=tops[i%tops.length];const size=14+Math.floor(Math.random()*18);const top=2+Math.random()*95;const left=8+Math.random()*64;const rot=Math.floor(Math.random()*360);html+=toppingHTML(t,`top:${top}%;left:${left}%;width:${size}px;height:${size}px;transform:rotate(${rot}deg)`);} } el.innerHTML=html;}}
+function renderWalls(){const visible=$('showDecor').checked;const tops=[...selectedToppings];for(const id of ['sideLeft','sideRight']){const el=$(id);if(!visible){el.innerHTML='';continue;}let html='';if(tops.length){const count=34;for(let i=0;i<count;i++){const t=tops[i%tops.length];const size=16+Math.floor(Math.random()*22);const top=2+Math.random()*95;const left=8+Math.random()*64;const rot=Math.floor(Math.random()*360);html+=toppingHTML(t,`top:${top}%;left:${left}%;width:${size}px;height:${size}px;transform:rotate(${rot}deg)`);} } el.innerHTML=html;}}
 function renderMiniPie(){const el=$('miniPie');const tops=[...selectedToppings];const positions=[[18,22,18],[48,17,16],[66,30,18],[25,52,17],[53,58,16],[70,69,15],[39,34,15],[62,47,14]];let html='<span class="pie-cheese"></span>';if(tops.length){positions.forEach((p,i)=>{const t=tops[i%tops.length];html+=pieToppingHTML(t,`left:${p[0]}%;top:${p[1]}%;width:${p[2]}%;height:${p[2]}%;transform:rotate(${i*37}deg)`);});}el.innerHTML=html;}
 function syncVisualButtons(){document.querySelectorAll('[data-base]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.base===visualBase)));document.querySelectorAll('[data-top]').forEach(el=>el.setAttribute('aria-pressed',String(selectedToppings.has(el.dataset.top))));}
 function updateVisuals(){syncVisualButtons();applyTheme();renderWalls();renderMiniPie();}
