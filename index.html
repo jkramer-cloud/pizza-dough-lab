@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#24241d">
+<title>Pizza Dough Lab — Build Your Perfect Pizza · v3</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT,WONK@9..144,700,30,1&display=swap');
+:root{--ink:#183631;--muted:#6e807a;--cream:#f7f5ee;--paper:#fffefa;--mint:#e7f1e9;--green:#2f7656;--orange:#f4a94b;--line:#dbe4dc;--shadow:0 12px 40px #193b3020}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer}header{background:var(--ink);color:#fff;overflow:hidden}.nav,.hero,.main,.foot{max-width:1140px;margin:auto;padding-left:24px;padding-right:24px}.nav{display:flex;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:20px}.logo{display:grid;place-items:center;background:#f6b84f;width:42px;height:42px;border-radius:13px;color:#17392e;font-size:24px;transform:rotate(-8deg)}.nav small{color:#c8dfd4;font-weight:600}.hero{padding-top:65px;padding-bottom:77px;display:grid;grid-template-columns:1.35fr .65fr;gap:30px;align-items:center}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.2em;font-weight:800;color:#f8c16c}.hero h1{font-family:Fraunces,Georgia,serif;font-size:clamp(46px,6vw,77px);line-height:1.04;letter-spacing:-.04em;margin:15px 0 20px}.hero p{color:#d6e6dc;line-height:1.7;max-width:590px;font-size:17px}.hero .circle{width:min(285px,100%);aspect-ratio:1;border:3px solid #7fba91;border-radius:50%;margin:auto;display:grid;place-items:center;position:relative;background:radial-gradient(circle,#e4ba78 0 60%,#9e5b39 61% 64%,transparent 65%);box-shadow:0 0 0 15px #ffffff0b,0 0 0 30px #ffffff07}.pizza{font-size:112px;filter:drop-shadow(0 10px 2px #0002)}.circle:after{content:'GOOD PIZZA STARTS HERE';position:absolute;bottom:-37px;font-size:11px;font-weight:800;letter-spacing:.15em;color:#f6c16c;white-space:nowrap}.main{margin-top:-27px;position:relative;padding-bottom:44px}.layout{display:grid;grid-template-columns: minmax(0,1fr) minmax(0,.9fr);gap:23px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:29px;box-shadow:var(--shadow)}.panel h2{font:700 29px Fraunces,Georgia,serif;margin:0 0 8px}.desc{font-size:14px;color:var(--muted);margin:0 0 28px;line-height:1.5}.control{margin:0 0 27px}.control-head{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin-bottom:13px}.control label,.section-label{font-weight:800;font-size:13px;letter-spacing:.045em}.control-head output{font-weight:800;color:var(--green);font-size:25px}.slider{width:100%;height:7px;border-radius:20px;appearance:none;background:linear-gradient(to right,var(--green) 0%,var(--green) var(--fill,40%),#dfe5df var(--fill,40%),#dfe5df 100%);cursor:pointer;margin:12px 0}.slider::-webkit-slider-thumb{appearance:none;background:#f6ae51;border:4px solid #fff;box-shadow:0 1px 7px #0004;width:28px;height:28px;border-radius:50%}.slider::-moz-range-thumb{background:#f6ae51;border:4px solid #fff;box-shadow:0 1px 7px #0004;width:20px;height:20px;border-radius:50%}.range-ends{display:flex;justify-content:space-between;color:#8e9c94;font-size:12px;margin-top:3px}.button-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:13px 0 27px}.choice{border-radius:10px;border:1.5px solid var(--line);background:#f7f8f3;color:#4c6559;padding:13px 6px;font-size:13px;font-weight:800}.choice[aria-pressed=true]{border-color:var(--green);color:#fff;background:var(--green)}.info{background:#eaf3ec;border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.6;color:#456454;margin:0 0 24px}.subheading{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:22px;margin-bottom:15px}.subheading h3{font-size:17px;margin:0}.subheading small{color:var(--muted)}.advanced{display:none}.advanced.open{display:block}.field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field label{display:block;font-size:12px;font-weight:800;color:#566b60;margin:0 0 8px}.field input,.field select{width:100%;min-width:0;border:1px solid #cadbcf;border-radius:10px;padding:12px 10px;color:var(--ink);background:#fff}.field input:focus,.field select:focus{outline:2px solid #8abd9d;outline-offset:1px}.toggle{display:flex;gap:10px;align-items:center;font-size:13px;font-weight:700;margin:14px 0}.toggle input{accent-color:var(--green);width:19px;height:19px}.linkbutton{display:inline-flex;border:0;background:transparent;padding:7px 0;color:var(--green);font-size:13px;font-weight:800;text-decoration:underline;text-underline-offset:4px}.result-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.pill{background:#e2f0e4;color:#2c7151;font-size:11px;letter-spacing:.06em;font-weight:800;border-radius:50px;padding:9px 12px;white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:25px 0}.stat{background:#f1f5ed;border-radius:13px;padding:16px}.stat b{display:block;font:700 31px Fraunces,Georgia,serif;margin:3px 0 2px}.stat span{color:#62776a;font-size:12px;font-weight:700}.stat b small{font:600 13px 'DM Sans',sans-serif}.recipe-table{width:100%;border-collapse:collapse}.recipe-table th{text-transform:uppercase;letter-spacing:.08em;font-size:10px;text-align:left;color:#809087;padding:11px 2px;border-bottom:2px solid var(--ink)}.recipe-table td{padding:15px 2px;border-bottom:1px solid var(--line);font-size:14px}.recipe-table td:nth-child(2){font-weight:800;white-space:nowrap}.recipe-table td:nth-child(3){text-align:right;color:#7b8c7e;white-space:nowrap}.recipe-table tfoot td{font-weight:800;border-top:2px solid var(--ink);border-bottom:0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}.btn{border:0;border-radius:11px;padding:13px 17px;background:var(--green);color:white;font-weight:800;font-size:13px}.btn.secondary{background:#e7efe7;color:#35664b}.btn:hover{filter:brightness(.93)}.instructions{margin-top:23px}.step{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}.step:last-child{border:0}.step-num{flex:0 0 31px;height:31px;display:grid;place-items:center;background:#f5bd67;border-radius:9px;font-weight:800;font-size:12px}.step p{font-size:14px;line-height:1.6;margin:3px 0 0}.tip{background:#fff0d9;border-radius:13px;padding:15px;font-size:13px;line-height:1.55;margin-top:18px}.foot{border-top:1px solid var(--line);padding-top:25px;padding-bottom:40px;color:#5c7467;font-size:13px;line-height:1.7}.foot a{color:#286b4d;font-weight:800}.foot strong{color:var(--ink)}.fine{font-size:11px;color:#71877a}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#19392d;color:white;padding:13px 20px;border-radius:10px;box-shadow:var(--shadow);display:none;z-index:10;font-size:13px}.toast.show{display:block}@media(max-width:800px){.hero{grid-template-columns:1fr;gap:5px;padding-top:44px;padding-bottom:60px}.hero .circle{display:none}.layout{grid-template-columns:1fr}.panel{padding:23px}.main{margin-top:-20px}.nav small{display:none}}@media(max-width:380px){.panel{padding:18px}.stat{padding:12px}.stat b{font-size:27px}.button-row{gap:5px}.choice{padding:12px 3px;font-size:12px}}@media print{header,.settings,.actions,.foot,.linkbutton{display:none!important}body{background:#fff}.main{margin:0;padding:0;max-width:100%}.layout{display:block}.panel{box-shadow:none;border:none}.result{padding:0}.instructions{break-before:auto}}
+
+/* Dough Lab visual identity: hand-drawn pizza dial and ingredient meter */
+.hero .circle{background:none;border:0;box-shadow:none;width:290px;max-width:100%;filter:drop-shadow(0 22px 18px #0003)}
+.hero .circle:after{bottom:-26px}
+.hero-pie,.mini-pie{display:block;position:relative;border-radius:50%;aspect-ratio:1;background:radial-gradient(circle at 48% 45%,#e5a64f 0 66%,#ae632f 67% 75%,#e8bc71 76% 88%,#8f512d 89% 100%);box-shadow:inset 0 0 0 7px #eac88d,inset 0 0 0 13px #bc713b,0 7px 0 #864721}
+.hero-pie{width:100%;transform:rotate(-14deg)}
+.hero-pie::before,.mini-pie::before{content:'';position:absolute;inset:15%;border-radius:50%;background:radial-gradient(circle at 32% 23%,#9f3526 0 7%,transparent 7.6%),radial-gradient(circle at 69% 29%,#a82e22 0 8%,transparent 8.6%),radial-gradient(circle at 44% 53%,#9f3526 0 9%,transparent 9.6%),radial-gradient(circle at 78% 68%,#9f3526 0 8%,transparent 8.6%),radial-gradient(circle at 22% 76%,#a82e22 0 7%,transparent 7.6%),radial-gradient(circle at 58% 83%,#9f3526 0 7%,transparent 7.6%),repeating-radial-gradient(circle at 42% 50%,#f7da91 0 9px,#e8c46e 10px 17px,#f3d487 18px 26px);border:3px solid #b75b32}
+.hero-pie::after,.mini-pie::after{content:'';position:absolute;inset:25%;border-radius:50%;background:radial-gradient(ellipse at 19% 33%,#397f46 0 5%,transparent 6%),radial-gradient(ellipse at 75% 18%,#397f46 0 5%,transparent 6%),radial-gradient(ellipse at 80% 74%,#397f46 0 5%,transparent 6%),radial-gradient(ellipse at 40% 90%,#397f46 0 5%,transparent 6%);transform:rotate(-20deg)}
+.preview-card{border:1px solid #e5ddc9;background:linear-gradient(145deg,#fff9e9,#f4ead5);border-radius:17px;display:grid;grid-template-columns:130px minmax(0,1fr);align-items:center;gap:18px;padding:17px;margin:18px 0 6px;overflow:hidden}
+.preview-art{width:118px;height:118px;display:grid;place-items:center;position:relative}
+.preview-art .mini-pie{width:var(--pie-size,85%);transition:width .24s ease,transform .24s ease;transform:rotate(var(--pie-rotation,-12deg))}
+.preview-art::before{content:'';width:110px;height:110px;border:2px dashed #d6c8a9;border-radius:50%;position:absolute}
+.preview-copy .preview-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:#a16a32}
+.preview-copy strong{display:block;font:700 26px Fraunces,Georgia,serif;margin:7px 0 4px}
+.preview-copy p{margin:0;color:#806b52;font-size:12px;line-height:1.5}
+.preview-count{font-weight:800;color:#35664b;margin-top:8px;font-size:12px}
+.dough-meter{margin:22px 0 18px}.dough-meter-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;margin-bottom:8px}.meter-track{height:15px;border-radius:50px;display:flex;overflow:hidden;background:#e1e6dd}.meter-track span{transition:width .22s ease}.meter-flour{background:#e7b86b}.meter-water{background:#70ada8}.meter-other{background:#53715e}.meter-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:#738477;margin-top:9px}.meter-legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px}
+.demo-indicator{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;color:#3b795c;background:#e5f0e7;border-radius:20px;padding:6px 10px}.demo-indicator:before{content:'';width:7px;height:7px;background:#4c9b68;border-radius:50%}
+@media(max-width:430px){.preview-card{grid-template-columns:105px minmax(0,1fr);gap:10px;padding:12px}.preview-art{width:100px;height:100px}.preview-art:before{width:94px;height:94px}.preview-copy strong{font-size:22px}}
+@media print{.preview-card{break-inside:avoid}}
+
+/* V3 visual system — independent neighborhood-pizzeria identity */
+:root{--ink:#262922;--muted:#77756a;--cream:#f4efe5;--paper:#fffdf6;--mint:#f0ece1;--green:#b83c2d;--orange:#f3b855;--line:#e5dbca;--shadow:0 14px 38px #31271c13}
+body{background:var(--cream);color:var(--ink);background-image:radial-gradient(#654c3110 .7px,transparent .7px);background-size:11px 11px}
+header{background:#232820;position:relative;isolation:isolate}
+header::before{content:"";pointer-events:none;position:absolute;inset:0;opacity:.13;background-image:radial-gradient(#f8f1cf 0.7px,transparent 1px);background-size:14px 14px;z-index:-1}
+header::after{content:"";position:absolute;bottom:0;left:0;right:0;height:9px;background:repeating-linear-gradient(90deg,#b9432e 0 75px,#e1a04c 75px 125px,#f1dfb6 125px 145px)}
+.nav{padding-top:23px;padding-bottom:17px;border-bottom:1px solid #fff2}
+.brand{gap:13px;font-weight:900;font-size:19px;letter-spacing:-.06em;line-height:1.04}
+.brand em{color:#f1b756;font-style:normal}
+.brand small{display:block;color:#a5b09b;font-size:8px;letter-spacing:.2em;font-weight:800;margin-top:6px}
+.logo{background:#e8ae4c;color:#293024;font:900 28px Georgia,serif;width:51px;height:51px;border-radius:50%;border:2px dashed #1e2a1d;outline:3px solid #edc47a;transform:rotate(-15deg)}
+.nav-badge{font-size:10px;letter-spacing:.17em;color:#e3dbc7;font-weight:900;border:1px solid #aebba758;border-radius:999px;padding:11px 17px}
+.hero{grid-template-columns:1.25fr .75fr;padding-top:70px;padding-bottom:103px;gap:45px;position:relative}
+.eyebrow{color:#f3bc62;font-size:11px;letter-spacing:.16em;display:flex;align-items:center;gap:11px}
+.eyebrow-sun{font:900 21px Georgia,serif}
+.hero h1{font:800 clamp(49px,6.6vw,91px)/.99 Fraunces,Georgia,serif;letter-spacing:-.059em;margin:19px 0 22px;color:#fff9eb}
+.hero h1 i{font-style:italic;color:#f1b855;text-decoration:underline;text-decoration-color:#b5422e;text-decoration-thickness:5px;text-underline-offset:8px}
+.hero p{font-size:16px;max-width:525px;color:#d4d5c8}
+.hero-points{display:flex;gap:25px;flex-wrap:wrap;margin-top:28px;color:#f2d5a6;font:800 10px 'DM Sans',sans-serif;letter-spacing:.16em}
+.hero .circle{width:min(315px,100%);position:relative;transform:rotate(5deg);filter:drop-shadow(0 22px 28px #0007)}
+.hero .circle:after{content:""}
+.hero-pie{box-shadow:inset 0 0 0 7px #eac88d,inset 0 0 0 13px #bc713b,0 12px 0 #743f22,0 30px 20px #0004}
+.pizza-stamp{position:absolute;right:-22px;bottom:-17px;z-index:1;background:#f0b94c;color:#26271e;border-radius:50%;width:103px;height:103px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:900;font-size:11px;line-height:1.3;letter-spacing:.025em;box-shadow:0 7px 0 #bb712f;border:4px double #6c491e;transform:rotate(12deg)}
+.pizza-stamp b{font-size:18px}
+.main{margin-top:-39px;padding-bottom:53px}
+.intro-ribbon{background:#e8b654;border:1px solid #d6a64e;border-radius:15px;display:flex;align-items:center;gap:16px;padding:17px 24px;margin:0 0 17px;box-shadow:0 12px 20px #392b1b10}
+.ribbon-star{font:900 30px Georgia,serif}.intro-ribbon strong{font-size:12px;letter-spacing:.1em}.intro-ribbon small{display:block;font-size:12px;margin-top:4px;color:#655233}.ribbon-icon{font-size:22px;margin-left:auto}
+.layout{gap:17px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.panel{background:var(--paper);border-radius:18px;border:1px solid #ded2bc;padding:29px;box-shadow:var(--shadow)}
+.panel-kicker{color:#a45b39;font-size:10px;letter-spacing:.14em;font-weight:900;margin-bottom:13px;display:flex;align-items:center;gap:9px}
+.panel-kicker span{display:grid;place-items:center;color:#f9efd9;background:#a83b2c;border-radius:50%;font-size:9px;width:23px;height:23px;letter-spacing:0}
+.panel h2{font-size:33px;letter-spacing:-.045em}
+.desc{color:#79756a}
+.control{background:#f6f0e4;border:1px solid #eee3cf;border-radius:15px;padding:20px;margin-bottom:14px}
+.control label,.section-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.control-head output{font:800 29px Fraunces,Georgia,serif;color:#a63829;background:#fff7e9;border-radius:9px;padding:3px 10px}
+.slider{height:9px;background:linear-gradient(to right,#b7432e 0%,#b7432e var(--fill,40%),#ddcfb8 var(--fill,40%),#ddcfb8 100%);margin:17px 0}
+.slider::-webkit-slider-thumb{background:#eaae51;width:30px;height:30px;border:5px solid white;box-shadow:0 2px 0 #a76127,0 4px 13px #0003}
+.slider::-moz-range-thumb{background:#eaae51;width:21px;height:21px;border:5px solid white}
+.range-ends{color:#8c8476}
+.section-label{display:block;margin-top:26px}
+.button-row{gap:7px}.choice{border:1px solid #dfd5c5;background:#f5efe5;color:#554f45;border-radius:9px;min-height:51px}
+.choice[aria-pressed=true]{background:#b63e2d;border-color:#b63e2d;box-shadow:inset 0 -3px #8c2e22}
+.choice:focus-visible,.btn:focus-visible,.slider:focus-visible{outline:3px solid #edae4b;outline-offset:3px}
+.info{background:#f4e7d0;color:#665038;border-left:4px solid #c59043}
+.subheading{border-top:2px dashed #dfd3c1;margin-top:25px}.subheading small{font-size:10px}
+.field input,.field select{border-color:#d8c8b1}.toggle input{accent-color:#b63e2d}.linkbutton{color:#a63a2c}
+.result{background:#fffefa}.result-head h2{margin-bottom:0}.pill{background:#f4e4cc;color:#a83c2d;border:1px solid #efd1a9}
+.preview-card{position:relative;background:#ead9bb;background-image:repeating-linear-gradient(13deg,#fff3 0 1px,transparent 1px 15px);border:1px solid #d9c49e;padding:21px 15px;margin-top:23px;border-radius:12px;grid-template-columns:145px minmax(0,1fr)}
+.preview-art{width:136px;height:136px}.preview-art::before{width:130px;height:130px;border:1px dashed #8a7351}
+.preview-art .mini-pie{filter:drop-shadow(0 7px 3px #0002)}
+.preview-copy .preview-eyebrow{letter-spacing:.13em;color:#8d5233;font-weight:900}
+.preview-copy strong{font-family:Fraunces,Georgia,serif;letter-spacing:-.04em}
+.preview-copy p{color:#665b47}.preview-count{display:inline-block;background:#fff6df;color:#9c3a27;border-radius:7px;padding:8px 10px}
+.dough-meter{padding:17px;background:#f8f3e8;border-radius:12px;border:1px solid #e9ddca}
+.demo-indicator{color:#437049;background:#e8efdf}.demo-indicator:before{background:#6b9755}
+.stats{gap:9px;margin:16px 0 23px}.stat{background:#f5efe3;border:1px solid #ebddc5;padding:16px 14px;border-radius:10px}
+.stat:first-child{background:#27342b;color:#fff7e7;border-color:#27342b}.stat:first-child span{color:#d4ddca}.stat:first-child b{color:#f4bc56}
+.stat span{color:#786f5d;font-size:10px;letter-spacing:.07em}
+.stat b{font-size:32px;letter-spacing:-.04em}
+.recipe-table th{color:#947d69;border-bottom:2px solid #382f25}.recipe-table td{border-color:#eadfd0}.recipe-table td:nth-child(2){font-size:17px;color:#af3c2a}.recipe-table td:nth-child(3){color:#857669}
+.btn{background:#b53f2e;border-radius:9px;min-height:47px}.btn.secondary{background:#f0e1c5;color:#5a4530}
+.instructions{padding-top:24px;border-top:2px dashed #e5d6c0}.step-num{background:#edbb5e}.tip{background:#f5e6cd;border-left:4px solid #d5a64b}
+.foot{color:#71685a;border-top:2px solid #ded0b8;padding-top:28px}.foot a{color:#a83829}.foot strong{color:#252b25}
+@media(min-width:900px){.settings{position:sticky;top:16px}}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px;padding-bottom:68px}.hero .circle{display:none}.layout{grid-template-columns:1fr}.nav-badge{display:none}.main{margin-top:-22px}}
+@media(max-width:430px){.hero h1{font-size:clamp(43px,12vw,62px)}.hero p{font-size:15px}.hero-points{gap:12px;font-size:9px}.panel{padding:19px}.intro-ribbon{padding:12px 14px}.ribbon-star{font-size:23px}.intro-ribbon small{font-size:11px}.preview-card{grid-template-columns:106px minmax(0,1fr);gap:9px;padding:12px}.preview-art{width:98px;height:98px}.preview-art:before{width:92px;height:92px}.preview-copy strong{font-size:22px}.stat b{font-size:27px}.control{padding:16px}.choice{font-size:11px}}
+@media print{header,.intro-ribbon{display:none!important}.settings{position:static}.panel{border:0}.result{background:white}.stat:first-child{background:#fff;color:#222;border:1px solid #ddd}.stat:first-child b,.stat:first-child span{color:#222}}
+
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand"><span class="logo" aria-hidden="true">✳</span><span>PIZZA <em>DOUGH</em> LAB<small>EST. IN YOUR KITCHEN</small></span></div><span class="nav-badge">FLOUR · WATER · FIRE</span></div><div class="hero"><div><div class="eyebrow"><span class="eyebrow-sun">✳</span> YOUR HOME PIZZERIA STARTS HERE</div><h1>Great pizza<br>starts with <i>dough.</i></h1><p>Dial in the crust. Find your perfect dough ball. Make a pizza night worth remembering—all with a few simple sliders.</p><div class="hero-points"><span>01 / CHOOSE</span><span>02 / MIX</span><span>03 / BAKE</span></div></div><div class="circle" aria-hidden="true"><span class="hero-pie"></span><span class="pizza-stamp">MADE WITH<br>GOOD DOUGH <b>★</b></span></div></div></header>
+<main class="main"><div class="intro-ribbon"><span class="ribbon-star">✳</span><div><strong>YOUR RECIPE, MADE FRESH.</strong><small>Adjust anything. Every ingredient updates instantly.</small></div><span class="ribbon-icon" aria-hidden="true">↗</span></div><div class="layout">
+<section class="panel settings" aria-label="Pizza settings"><div class="panel-kicker"><span>01</span> THE DOUGH BUILDER</div><h2>Make it yours.</h2><p class="desc">Adjust the sliders to build your batch. Your recipe and pizza preview update instantly.</p>
+<div class="control"><div class="control-head"><label for="diameter">Pizza diameter</label><output id="diameterVal" for="diameter">14 in</output></div><input class="slider" type="range" id="diameter" min="8" max="20" step="1" value="14"><div class="range-ends"><span>8 in</span><span>14 in</span><span>20 in</span></div></div>
+<div class="control"><div class="control-head"><label for="count">Number of pizzas</label><output id="countVal" for="count">2</output></div><input class="slider" type="range" id="count" min="1" max="12" step="1" value="2"><div class="range-ends"><span>1 pizza</span><span>6 pizzas</span><span>12 pizzas</span></div></div>
+<div class="section-label">Crust thickness</div><div class="button-row" id="crustChoices"><button type="button" class="choice" data-crust="thin" aria-pressed="false">Thin &amp; crisp</button><button type="button" class="choice" data-crust="classic" aria-pressed="true">Classic</button><button type="button" class="choice" data-crust="thick" aria-pressed="false">Thick &amp; airy</button></div>
+<div id="crustTip" class="info">Classic crust: a flexible dough with a balanced rim and chewy center.</div>
+<div class="section-label">Fermentation plan</div><div class="button-row" id="fermentChoices"><button type="button" class="choice" data-ferment="same" aria-pressed="false">Same day</button><button type="button" class="choice" data-ferment="overnight" aria-pressed="true">Overnight</button><button type="button" class="choice" data-ferment="long" aria-pressed="false">2–3 days</button></div>
+<label class="toggle"><input type="checkbox" id="glutenFree"> Gluten-free flour blend (experimental)</label><div id="gfTip" class="info" hidden>Gluten-free recipes need a purpose-built flour blend and often a binder. The standard method below is designed for wheat dough; choose a tested gluten-free method for reliable results.</div>
+<div class="subheading"><h3>Fine-tune ingredients</h3><small>Baker’s percentages</small></div><button type="button" class="linkbutton" id="advancedToggle" aria-expanded="false" aria-controls="advanced">Show recipe controls +</button>
+<div id="advanced" class="advanced"><p class="desc" style="margin-top:12px">Every percentage is measured relative to flour weight. Change any value to make the recipe your own.</p><div class="field-grid">
+<div class="field"><label for="hydration">Water / hydration (%)</label><input id="hydration" type="number" min="45" max="90" step="0.5" value="63"></div>
+<div class="field"><label for="salt">Salt (%)</label><input id="salt" type="number" min="0" max="5" step="0.1" value="2.5"></div>
+<div class="field"><label for="oil">Olive oil (%)</label><input id="oil" type="number" min="0" max="12" step="0.1" value="2"></div>
+<div class="field"><label for="sugar">Sugar (%)</label><input id="sugar" type="number" min="0" max="10" step="0.1" value="1"></div>
+<div class="field"><label for="yeast">Active dry yeast (%)</label><input id="yeast" type="number" min="0.05" max="3" step="0.05" value="0.25"></div>
+<div class="field"><label for="ballOverride">Dough per pizza (g)</label><input id="ballOverride" type="number" min="100" max="1600" step="1" placeholder="Auto"></div>
+</div><button type="button" class="linkbutton" id="reset">Reset recipe defaults</button></div>
+</section>
+<section class="panel result" aria-label="Your recipe"><div class="panel-kicker"><span>02</span> YOUR RECIPE CARD</div><div class="result-head"><h2>Ready to roll.</h2><span class="pill" id="tag">OVERNIGHT</span></div><p class="desc">Weigh your ingredients for consistent results.</p><div class="preview-card" aria-label="Live pizza preview"><div class="preview-art"><span class="mini-pie" id="miniPie"></span></div><div class="preview-copy"><div class="preview-eyebrow">FRESH FROM YOUR KITCHEN</div><strong id="visualSize">14-inch classic</strong><p id="visualDescription">An easy-to-stretch, balanced crust.</p><div class="preview-count" id="visualCount">2 dough balls ready to make</div></div></div><div class="dough-meter"><div class="dough-meter-head"><span>INSIDE YOUR DOUGH</span><span class="demo-indicator">LIVE RECIPE</span></div><div class="meter-track" aria-label="Relative dough ingredient composition"><span id="meterFlour" class="meter-flour"></span><span id="meterWater" class="meter-water"></span><span id="meterOther" class="meter-other"></span></div><div class="meter-legend"><span><i style="background:#e7b86b"></i>Flour</span><span><i style="background:#70ada8"></i>Water</span><span><i style="background:#53715e"></i>Other ingredients</span></div></div>
+<div class="stats"><div class="stat"><span>DOUGH PER PIZZA</span><b id="ballWeight">— <small>g</small></b></div><div class="stat"><span>TOTAL DOUGH</span><b id="totalWeight">— <small>g</small></b></div><div class="stat"><span>TOTAL FLOUR</span><b id="flourTotal">— <small>g</small></b></div><div class="stat"><span>HYDRATION</span><b id="waterPercent">63<small>%</small></b></div></div>
+<table class="recipe-table"><thead><tr><th>Ingredient</th><th>Amount</th><th>Baker's %</th></tr></thead><tbody id="ingredients"></tbody><tfoot><tr><td>Total dough</td><td id="grandTotal">—</td><td>100% batch</td></tr></tfoot></table>
+<div class="actions"><button type="button" class="btn" id="copy">Copy recipe</button><button type="button" class="btn secondary" id="print">Print / Save PDF</button></div>
+<div class="instructions"><div class="panel-kicker"><span>03</span> FROM BOWL TO OVEN</div><h2 style="font-size:25px">How to make it.</h2><p class="desc" style="margin-bottom:10px">A practical home-oven dough method.</p><div id="steps"></div><div class="tip" id="bakeTip"></div></div>
+</section></div></main>
+<footer class="foot"><strong>Pizza Dough Lab</strong> is an independent, free educational baking tool. It is not affiliated with Dough Guy.<p>Inspiration credit: <a href="https://doughguy.co" target="_blank" rel="noopener noreferrer">Dough Guy</a> — whose approachable pizza dough calculator and slider-based interface helped inspire this project. All design, wording, computations, and adjustable recipe presets here are independently implemented.</p><p class="fine">Dough weights are estimates based on circular pizza area and an adjustable crust loading. Temperature, flour absorption, mixing technique, and oven performance affect the final pizza. Use a scale and food-safe practices.</p></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);let crust='classic',ferment='overnight',manualYeast=false,manualHydration=false;
+const crusts={thin:{factor:1.62,label:'Thin & crisp',tip:'Thin crust: roll or stretch it thinner for a crisp, delicate bite.'},classic:{factor:1.95,label:'Classic',tip:'Classic crust: a flexible dough with a balanced rim and chewy center.'},thick:{factor:2.42,label:'Thick & airy',tip:'Thick crust: use extra dough, leave an airy rim, and allow time to proof.'}};
+const timings={same:{label:'SAME DAY',yeast:0.8},overnight:{label:'OVERNIGHT',yeast:0.25},long:{label:'2–3 DAYS',yeast:0.12}};
+const fields=['hydration','salt','oil','sugar','yeast'];const defaults={hydration:63,salt:2.5,oil:2,sugar:1};
+const fmt=n=>n<10?n.toFixed(1):String(Math.round(n));const exact=n=>Number(n.toFixed(2));let current=null;
+function num(id,fallback,min,max){const v=Number($(id).value);return Number.isFinite(v)?Math.min(max,Math.max(min,v)):fallback}
+function track(id){const e=$(id);e.style.setProperty('--fill',((+e.value- +e.min)/(+e.max- +e.min)*100)+'%')}
+function recalc(){const diameter=num('diameter',14,8,20),count=num('count',2,1,12),gf=$('glutenFree').checked;
+const h=num('hydration',63,45,90),s=num('salt',2.5,0,5),o=num('oil',2,0,12),su=num('sugar',1,0,10),y=num('yeast',.25,.05,3);
+const autoMass=Math.round(Math.PI*(diameter/2)**2*crusts[crust].factor),override=$('ballOverride').value.trim();const ball=override!==''?num('ballOverride',autoMass,100,1600):autoMass;const total=ball*count;
+const divisor=1+(h+s+o+su+y)/100;const flour=total/divisor;
+const parts=[['Bread flour',flour,100],['Water',flour*h/100,h],['Active dry yeast',flour*y/100,y],['Salt',flour*s/100,s],['Sugar',flour*su/100,su],['Olive oil',flour*o/100,o]];
+current={diameter,count,crust:crusts[crust].label,ferment:timings[ferment].label,ball,total,parts,hydration:h,gf};
+$('diameterVal').textContent=diameter+' in';$('countVal').textContent=count;$('crustTip').textContent=crusts[crust].tip;$('tag').textContent=timings[ferment].label;
+$('ballWeight').innerHTML=Math.round(ball)+' <small>g</small>';$('totalWeight').innerHTML=Math.round(total)+' <small>g</small>';$('flourTotal').innerHTML=Math.round(flour)+' <small>g</small>';$('waterPercent').innerHTML=h+'<small>%</small>';
+$('ingredients').innerHTML=parts.map(([name,weight,pct])=>`<tr><td>${name}${name==='Bread flour'&&gf?'<br><small>GF blend: consult tested recipe</small>':''}</td><td>${fmt(weight)} g</td><td>${pct}%</td></tr>`).join('');
+$('grandTotal').textContent=fmt(total)+' g';$('gfTip').hidden=!gf;
+$('miniPie').style.setProperty('--pie-size',(60+(diameter-8)*3.15)+'%');
+$('miniPie').style.setProperty('--pie-rotation',(diameter*3-50)+'deg');
+$('visualSize').textContent=diameter+'-inch '+(crust==='classic'?'classic':crust);
+$('visualDescription').textContent=crusts[crust].tip;
+$('visualCount').textContent=count+' dough '+(count===1?'ball':'balls')+' · '+Math.round(ball)+' g each';
+$('meterFlour').style.width=(flour/total*100)+'%';
+$('meterWater').style.width=(flour*h/100/total*100)+'%';
+$('meterOther').style.width=((total-flour-flour*h/100)/total*100)+'%';
+const intro='Add water and yeast to a bowl. Mix in flour until no dry flour remains. Rest 15–20 minutes.';
+const steps=[intro,'Add salt, sugar, and olive oil. Knead 6–10 minutes until the dough is cohesive and smoother.','Cover and rest at room temperature for 30–60 minutes.'];
+if(ferment==='same')steps.push('Divide into '+count+' portions, shape tight dough balls, cover, and let rise at room temperature 2–4 hours, until puffy.');
+if(ferment==='overnight')steps.push('Divide into '+count+' portions and shape tight dough balls. Place in lightly oiled, covered containers; refrigerate about 18–24 hours.','Remove from refrigerator 1–2 hours before baking so dough is relaxed and workable.');
+if(ferment==='long')steps.push('Divide into '+count+' portions and shape tight dough balls. Refrigerate covered for 48–72 hours.','Remove from refrigerator about 2 hours before baking. Handle gently to retain gas.');
+steps.push('Preheat the oven and baking steel or stone for 45–60 minutes. Stretch each dough ball to about '+diameter+' inches; avoid crushing the rim.','Top lightly and bake until the underside browns and cheese is bubbling. Rotate as needed.');
+$('steps').innerHTML=steps.map((txt,i)=>`<div class="step"><span class="step-num">${String(i+1).padStart(2,'0')}</span><p>${txt}</p></div>`).join('');
+$('bakeTip').innerHTML='<strong>Oven tip:</strong> For most home ovens, preheat to the highest safe setting (often 500–550°F / 260–290°C). Start checking after '+(crust==='thin'?'4–6':crust==='thick'?'9–13':'6–10')+' minutes. Time varies substantially with toppings, cookware, and oven.'+(gf?' <strong>GF note:</strong> This is a weight estimate only—not a validated gluten-free formula or method.':'');
+['diameter','count'].forEach(track);
+}
+$('diameter').addEventListener('input',recalc);$('count').addEventListener('input',recalc);
+$('crustChoices').addEventListener('click',e=>{const b=e.target.closest('[data-crust]');if(!b)return;crust=b.dataset.crust;document.querySelectorAll('[data-crust]').forEach(el=>el.setAttribute('aria-pressed',String(el===b)));recalc()});
+$('fermentChoices').addEventListener('click',e=>{const b=e.target.closest('[data-ferment]');if(!b)return;ferment=b.dataset.ferment;document.querySelectorAll('[data-ferment]').forEach(el=>el.setAttribute('aria-pressed',String(el===b)));if(!manualYeast)$('yeast').value=timings[ferment].yeast;recalc()});
+fields.forEach(id=>$(id).addEventListener('input',()=>{if(id==='yeast')manualYeast=true;if(id==='hydration')manualHydration=true;recalc()}));$('ballOverride').addEventListener('input',recalc);$('glutenFree').addEventListener('change',()=>{if(!manualHydration)$('hydration').value=$('glutenFree').checked?70:63;recalc()});
+$('advancedToggle').addEventListener('click',()=>{const open=$('advanced').classList.toggle('open');$('advancedToggle').setAttribute('aria-expanded',String(open));$('advancedToggle').textContent=open?'Hide recipe controls −':'Show recipe controls +'});
+$('reset').addEventListener('click',()=>{manualYeast=false;manualHydration=false;for(const [k,v]of Object.entries(defaults))$(k).value=v;$('yeast').value=timings[ferment].yeast;$('ballOverride').value='';$('glutenFree').checked=false;recalc()});
+function asText(){const r=current;return `PIZZA DOUGH LAB\n${r.count} × ${r.diameter} in pizzas | ${r.crust} | ${r.ferment}\n${Math.round(r.ball)} g per pizza | ${Math.round(r.total)} g total dough\n\nINGREDIENTS\n`+r.parts.map(([name,g,pct])=>`${name}: ${fmt(g)} g (${pct}%)`).join('\n')+'\n\nFor instructions, use the Pizza Dough Lab recipe page.\nInspired by Dough Guy — https://doughguy.co'}
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
+$('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(asText());toast('Recipe copied to clipboard')}catch{const el=document.createElement('textarea');el.value=asText();document.body.append(el);el.select();document.execCommand('copy');el.remove();toast('Recipe copied')}});
+$('print').addEventListener('click',()=>window.print());recalc();
+})();
+</script>
+</body></html>
