@@ -230,6 +230,13 @@ html{scroll-behavior:smooth}
 @media print{.workshop{display:none}.side-view{display:none}}
 @media(prefers-reduced-motion:reduce){.resource-card{transition:none}}
 
+
+/* v5.1 layout tuning: narrower center, wider topping bands */
+.nav,.hero,.main,.foot{max-width:980px}
+@media(min-width:1200px){.side-wall{width:168px}}
+@media(min-width:1001px) and (max-width:1199px){.side-wall{width:128px}}
+@media(min-width:1200px){.nav,.hero,.main,.foot{padding-left:30px;padding-right:30px}}
+
 </style>
 </head>
 <body>
